@@ -21,7 +21,7 @@ def read(*parts):
 
 
 def read_version():
-    regexp = re.compile(r"^__version__\W*=\W*'([\d.abrc]+)'")
+    regexp = re.compile(r"^__version__\W*=\W*'([\d.abrc]+(\+\w+)?)'")
     init_py = os.path.join(os.path.dirname(__file__),
                            'aioredis', '__init__.py')
     with open(init_py) as f:
